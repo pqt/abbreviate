@@ -1,4 +1,4 @@
-import abbreviate from "../src/index";
+import abbreviate from "../index";
 
 test("it should abbreviate thousands", () => {
   expect(abbreviate(1234, 0)).toBe("1K");

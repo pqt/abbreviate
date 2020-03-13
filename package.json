@@ -1,10 +1,11 @@
 {
   "name": "@pqt/abbreviate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Abbreviate numbers in the Thousands (K), Millions (M), Billions (B) and Trillions (T)",
   "author": "Austin Paquette <austin@paquette.io>",
   "keywords": [],
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "rimraf build && tsc",
     "dev": "rimraf build && tsc --watch",
@@ -38,7 +39,7 @@
   },
   "jest": {
     "roots": [
-      "<rootDir>/__tests__"
+      "<rootDir>/src"
     ],
     "testMatch": [
       "**/__tests__/**/*.+(ts|tsx|js)",

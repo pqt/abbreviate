@@ -8,9 +8,6 @@ __tests__
 # Dependancies
 node_modules
 
-# Executables
-scripts
-
 # Source Files
 src
 
