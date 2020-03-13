@@ -1,0 +1,16 @@
+{
+  "name": "@pqt/abbreviate",
+  "version": "0.0.0",
+  "description": "Abbreviate long numbers in the Thousands (K), Millions (M), Billions (B) and Trillions (T)",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Austin Paquette <austin@paquette.io>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
