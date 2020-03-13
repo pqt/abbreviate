@@ -1,16 +1,52 @@
 {
   "name": "@pqt/abbreviate",
-  "version": "0.0.0",
-  "description": "Abbreviate long numbers in the Thousands (K), Millions (M), Billions (B) and Trillions (T)",
+  "version": "1.0.0",
+  "description": "Abbreviate numbers in the Thousands (K), Millions (M), Billions (B) and Trillions (T)",
+  "author": "Austin Paquette <austin@paquette.io>",
+  "keywords": [],
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf build && tsc",
+    "dev": "rimraf build && tsc --watch",
+    "format": "prettier ./{src,__{tests,mocks}__}/{**,**/**}/*.{js,jsx,ts,tsx} --write",
+    "lint": "eslint src --ext=\".js,.jsx,.ts,.tsx\"",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "Austin Paquette <austin@paquette.io>",
-  "license": "UNLICENSED",
   "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pqt/abbreviate"
+  },
+  "bugs": {
+    "url": "https://github.com/pqt/abbreviate/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run format && npm run lint && npm run test"
+    }
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/__tests__"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.+(ts|tsx|js)",
+      "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "license": "MIT"
 }
